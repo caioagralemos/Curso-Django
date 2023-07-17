@@ -1,8 +1,25 @@
 from django.shortcuts import render
 
+def about(request):
+    return render (request, 'pages/about.html')
+
+def dashboard(request):
+    return render (request, 'pages/dashboard.html')
 
 def index(request):
     return render (request, 'pages/index.html')
 
-def about(request):
-    return render (request, 'pages/about.html')
+def listing(request):
+    return render (request, 'pages/listing.html')
+
+def listings(request):
+    return render (request, 'pages/listings.html')
+
+def login(request):
+    return render (request, 'pages/login.html')
+
+def register(request):
+    return render (request, 'pages/register.html')
+
+def search(request):
+    return render (request, 'pages/search.html')
