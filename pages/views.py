@@ -9,17 +9,8 @@ def dashboard(request):
 def index(request):
     return render (request, 'pages/index.html')
 
-def listing(request):
-    return render (request, 'pages/listing.html')
-
-def listings(request):
-    return render (request, 'pages/listings.html')
-
 def login(request):
     return render (request, 'pages/login.html')
 
 def register(request):
     return render (request, 'pages/register.html')
-
-def search(request):
-    return render (request, 'pages/search.html')
