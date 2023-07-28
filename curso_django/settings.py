@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-rm#^h47=zos1o3&tszq&+ocpj8=rur)fsdj+u4b$#o4rv)$eda
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['137.184.184.147']
 
 
 # Application definition
@@ -152,7 +152,7 @@ MESSAGE_TAGS = {
 # EMAIL_PORT = 587
 # EMAIL_USE_TLS = False
 
-try:
-    from .local_settings import *
-except ImportError:
-    pass
+# try:
+#     from .local_settings import *
+# except ImportError:
+#     pass
