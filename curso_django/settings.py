@@ -151,3 +151,8 @@ MESSAGE_TAGS = {
 # EMAIL_HOST = 'smtp.zoho.com'
 # EMAIL_PORT = 587
 # EMAIL_USE_TLS = False
+
+try:
+    from .local_settings import *
+except ImportError:
+    pass
