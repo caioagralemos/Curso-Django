@@ -1,7 +1,7 @@
 {% extends 'base.html' %} 
 {% load humanize %}
 {% block title %}
-Welcome
+Bem-vindo(a)
 {% endblock %}
 {% block content %}
 
@@ -13,7 +13,7 @@ Welcome
   <div class="container text-center">
     <div class="home-search p-5">
       <div class="overlay p-5">
-        <h1 class="display-4 mb-4">Property Searching Just Got So Easy</h1>
+        <h1 class="display-4 mb-4">A pesquisa por imóveis ficou tão fácil</h1>
         <p class="lead">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae
           quas, asperiores eveniet vel nostrum magnam voluptatum tempore!
@@ -24,30 +24,30 @@ Welcome
             <!-- Form Row 1 -->
             <div class="form-row">
               <div class="col-md-4 mb-3">
-                <label class="sr-only">Keywords</label>
+                <label class="sr-only">Palavras-chave</label>
                 <input
                   type="text"
                   name="keywords"
                   class="form-control"
-                  placeholder="Keyword (Pool, Garage, etc)"
+                  placeholder="Palavra-chave (Piscina, Garagem, etc)"
                 />
               </div>
 
               <div class="col-md-4 mb-3">
-                <label class="sr-only">City</label>
+                <label class="sr-only">Cidade</label>
                 <input
                   type="text"
                   name="city"
                   class="form-control"
-                  placeholder="City"
+                  placeholder="Cidade"
                 />
               </div>
 
               <div class="col-md-4 mb-3">
-                <label class="sr-only">State</label>
+                <label class="sr-only">Estado</label>
                 <select name="state" class="form-control">
                   <option selected="true" disabled="disabled">
-                    State (All)
+                    Estados (Todos)
                   </option>
                   {% for key, value in state_choices.items %}
                   <option value='{{key}}'>{{value}}</option>
@@ -58,10 +58,10 @@ Welcome
             <!-- Form Row 2 -->
             <div class="form-row">
               <div class="col-md-6 mb-3">
-                <label class="sr-only">Bedrooms</label>
+                <label class="sr-only">Banheiros</label>
                 <select name="bedrooms" class="form-control">
                   <option selected="true" disabled="disabled">
-                    Bedrooms (All)
+                    Número de Quartos (Todos)
                   </option>
                   {% for key, value in bedroom_choices.items %}
                   <option value='{{key}}'>{{value}}</option>
@@ -71,7 +71,7 @@ Welcome
               <div class="col-md-6 mb-3">
                 <select name="price" class="form-control" id="type">
                   <option selected="true" disabled="disabled">
-                    Max Price (Any)
+                    Preço Máximo (Todos)
                   </option>
                   {% for key, value in price_choices.items %}
                   <option value='{{key}}'>{{value}}</option>
@@ -80,7 +80,7 @@ Welcome
               </div>
             </div>
             <button class="btn btn-secondary btn-block mt-4" type="submit">
-              Submit form
+              Pesquisar
             </button>
           </form>
         </div>
@@ -92,7 +92,7 @@ Welcome
 <!-- Listings -->
 <section id="listings" class="py-5">
   <div class="container">
-    <h3 class="text-center mb-3">Latest Listings</h3>
+    <h3 class="text-center mb-3">Últimos Anúncios</h3>
     <div class="row">
       {% if listings %}
         {% for listing in listings %}
@@ -115,13 +115,13 @@ Welcome
               <hr />
               <div class="row py-2 text-secondary">
                 <div class="col-6">
-                  <i class="fas fa-th-large"></i> Sqft: {{listing.sqft}}
+                  <i class="fas fa-th-large"></i> M²: {{listing.sqft}}
                 </div>
-                <div class="col-6"><i class="fas fa-car"></i> Garage: {{listing.garage}}</div>
+                <div class="col-6"><i class="fas fa-car"></i> Garagem: {{listing.garage}}</div>
               </div>
               <div class="row py-2 text-secondary">
-                <div class="col-6"><i class="fas fa-bed"></i> Bedrooms: {{listing.bedrooms}}</div>
-                <div class="col-6"><i class="fas fa-bath"></i> Bathrooms: {{listing.bathrooms}}</div>
+                <div class="col-6"><i class="fas fa-bed"></i> Quartos: {{listing.bedrooms}}</div>
+                <div class="col-6"><i class="fas fa-bath"></i> Banheiros: {{listing.bathrooms}}</div>
               </div>
               <hr />
               <div class="row py-2 text-secondary">
@@ -132,7 +132,7 @@ Welcome
               </div>
               <hr />
               <a href="{% url 'listing' listing.id %}" class="btn btn-primary btn-block"
-                >More Info</a
+                >Mais informações</a
               >
             </div>
           </div>
@@ -141,7 +141,7 @@ Welcome
         {% endfor %}
       {% else %}
         <div class='col-md-12'>
-          <p>No Listings Available</p>
+          <p>Nenhum imóvel disponivel!</p>
         </div>
       {% endif %}
     </div>
@@ -154,7 +154,7 @@ Welcome
       <div class="col-md-4">
         <i class="fas fa-comment fa-4x mr-4"></i>
         <hr />
-        <h3>Consulting Services</h3>
+        <h3>Consultoria de Imóveis</h3>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt,
           debitis nam! Repudiandae, provident iste consequatur hic dignissimos
@@ -164,7 +164,7 @@ Welcome
       <div class="col-md-4">
         <i class="fas fa-home fa-4x mr-4"></i>
         <hr />
-        <h3>Propery Management</h3>
+        <h3>Gestão de Propriedade</h3>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt,
           debitis nam! Repudiandae, provident iste consequatur hic dignissimos
@@ -174,7 +174,7 @@ Welcome
       <div class="col-md-4">
         <i class="fas fa-suitcase fa-4x mr-4"></i>
         <hr />
-        <h3>Renting & Selling</h3>
+        <h3>Aluguel & Venda</h3>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt,
           debitis nam! Repudiandae, provident iste consequatur hic dignissimos

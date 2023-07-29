@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block title %}
-About Us
+Sobre nós
 {% endblock %}
 {% block content %}
 <!-- Breadcrumb -->
@@ -11,7 +11,7 @@ About Us
         <li class="breadcrumb-item">
           <a href="{% url 'index' %}"> <i class="fas fa-home"></i> Home</a>
         </li>
-        <li class="breadcrumb-item active">About</li>
+        <li class="breadcrumb-item active">Sobre nós</li>
       </ol>
     </nav>
   </div>
@@ -21,7 +21,7 @@ About Us
   <div class="container">
     <div class="row">
       <div class="col-md-8">
-        <h2>We Search For The Perfect Home</h2>
+        <h2>Nós encontramos sua casa dos sonhos</h2>
         <p class="lead">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt,
           pariatur!
@@ -45,7 +45,7 @@ About Us
             alt="Seller of the month"
           />
           <div class="card-body">
-            <h5 class="card-title">Seller Of The Month</h5>
+            <h5 class="card-title">Vendedor do mês</h5>
             <h6 class="text-secondary">{{realtor.name}}</h6>
             <p class="card-text">
               {{realtor.description}}
@@ -61,21 +61,21 @@ About Us
 
 <!-- Work -->
 <section id="work" class="bg-dark text-white text-center">
-  <h2 class="display-4">We Work For You</h2>
+  <h2 class="display-4">Nós fazemos o trabalho por você!</h2>
   <h4>
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem velit
     aperiam, unde aliquid at similique!
   </h4>
   <hr />
   <a href="{% url 'listings' %}" class="btn btn-secondary text-white btn-lg"
-    >View Our Featured Listings</a
+    >Ver nossos melhores imóveis</a
   >
 </section>
 
 <!-- Team -->
 <section id="team" class="py-5">
   <div class="container">
-    <h2 class="text-center">Our Team</h2>
+    <h2 class="text-center">Nosso time</h2>
     <div class="row text-center">
     {% if realtors %}
       {% for realtor in realtors %}
@@ -87,7 +87,7 @@ About Us
         />
         <h4>{{realtor.name}}</h4>
         <p class="text-success">
-          <i class="fas fa-award text-success mb-3"></i> Realtor
+          <i class="fas fa-award text-success mb-3"></i> Corretor
         </p>
         <hr />
         <p><i class="fas fa-phone"></i> {{realtor.phone}}</p>
@@ -97,7 +97,7 @@ About Us
   </div>
   {% else %}
   <div class="col-md-12">
-    <p>No Realtors Available</p>
+    <p>Sem corretores disponíveis</p>
   </div>
   {% endif %}
 </section>

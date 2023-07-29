@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-rm#^h47=zos1o3&tszq&+ocpj8=rur)fsdj+u4b$#o4rv)$eda
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['137.184.184.147']
+ALLOWED_HOSTS = ['127.0.0.1', 'mydjango.kinghost.net', 'www.mydjango.kinghost.net']
 
 
 # Application definition
@@ -83,10 +83,10 @@ WSGI_APPLICATION = 'curso_django.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'myapp',
-        'USER': 'postgres',
-        'PASSWORD': '8501',
-        'HOST': 'localhost',
+        'NAME': 'mydjango',
+        'USER': 'mydjango',
+        'PASSWORD': '150803',
+        'HOST': 'pgsql.mydjango.kinghost.net',
     }
 }
 
@@ -125,15 +125,16 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = '/home/mydjango/www/static/curso_django'
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'curso_django/static')
 ]
 
 # Media Folder Settings
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'www/media')
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

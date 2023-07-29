@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load humanize %}
 {% block title %}
-Listings
+Imóveis
 {% endblock %}
 {% block content %}
 <!-- Breadcrumb -->
@@ -13,7 +13,7 @@ Listings
             <a href="{% url 'index' %}">
               <i class="fas fa-home"></i> Home</a>
           </li>
-          <li class="breadcrumb-item active"> Browse Listings</li>
+          <li class="breadcrumb-item active"> Imóveis</li>
         </ol>
       </nav>
     </div>
@@ -43,15 +43,15 @@ Listings
                 <hr>
                 <div class="row py-2 text-secondary">
                   <div class="col-6">
-                    <i class="fas fa-th-large"></i> Sqft: {{listing.sqft}}</div>
+                    <i class="fas fa-th-large"></i> M²: {{listing.sqft}}</div>
                   <div class="col-6">
-                    <i class="fas fa-car"></i> Garage: {{listing.garage}}</div>
+                    <i class="fas fa-car"></i> Garagem: {{listing.garage}}</div>
                 </div>
                 <div class="row py-2 text-secondary">
                   <div class="col-6">
-                    <i class="fas fa-bed"></i> Bedrooms: {{listing.bedrooms}}</div>
+                    <i class="fas fa-bed"></i> Quartos: {{listing.bedrooms}}</div>
                   <div class="col-6">
-                    <i class="fas fa-bath"></i> Bathrooms: {{listing.bathrooms}} </div>
+                    <i class="fas fa-bath"></i> Banheiros: {{listing.bathrooms}} </div>
                 </div>
                 <hr>
                 <div class="row py-2 text-secondary">
@@ -63,14 +63,14 @@ Listings
                     <i class="fas fa-clock"></i> {{listing.list_date | timesince }}</div>
                 </div>
                 <hr>
-                <a href={{listing.id}} class="btn btn-primary btn-block">More Info</a>
+                <a href={{listing.id}} class="btn btn-primary btn-block">Saiba Mais</a>
               </div>
             </div>
           </div>
           {% endfor %}
         {% else %}
           <div class='col-md-12'>
-            <p>No Listings Available!</p>
+            <p>Nenhum imóvel disponivel!</p>
           </div>
         {% endif %}
 

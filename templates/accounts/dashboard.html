@@ -8,8 +8,8 @@ Dashboard
   <div class='container'>
     <div class='row text-center'>
       <div class='col-md-12'>
-        <h1 class='display-4'>User Dashboard</h1>
-        <p class='lead'>Manage your BT Real Estate account</p>
+        <h1 class='display-4'>Dados de {{user.first_name}}</h1>
+        <p class='lead'>Gerencie os dados de sua conta BT Real Estate</p>
       </div>
     </div>
   </div>
@@ -27,7 +27,7 @@ Dashboard
             <a href="{% url 'index' %}">
               <i class="fas fa-home"></i> Home</a>
           </li>
-          <li class="breadcrumb-item active"> Dashboard</li>
+          <li class="breadcrumb-item active"> Dados de {{user.first_name}}</li>
         </ol>
       </nav>
     </div>
@@ -37,14 +37,14 @@ Dashboard
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h2>Welcome {{user.first_name}}</h2>
+          <h2>Bem vindo(a), {{user.first_name}}</h2>
           {% if contacts %}
-          <p>Here are the property listings that you have inquired about</p>
+          <p>Aqui estão as listagens de imóveis sobre as quais você consultou</p>
           <table class="table">
             <thead>
               <tr>
                 <th scope="col">#</th>
-                <th scope="col">Property</th>
+                <th scope="col">Imóvel</th>
                 <th></th>
               </tr>
             </thead>
@@ -54,14 +54,14 @@ Dashboard
                 <td>{{contact.id}}</td>
                 <td>{{contact.listing}}</td>
                 <td>
-                  <a class="btn btn-light" href="{% url 'listing' contact.listing_id %}">View Listing</a>
+                  <a class="btn btn-light" href="{% url 'listing' contact.listing_id %}">Ver Imóvel</a>
                 </td>
               </tr>
               {% endfor %}
             </tbody>
           </table>
           {% else %}
-          <p>You have not made any inquiries</p>
+          <p>Você não consultou nenhum imóvel ainda</p>
           {% endif %}
         </div>
       </div>

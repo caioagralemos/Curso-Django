@@ -31,7 +31,7 @@
               class = "nav-item mr-3"
             {% endif %}
           >
-            <a class="nav-link" href="{% url 'about' %}">About</a>
+            <a class="nav-link" href="{% url 'about' %}">Sobre nós</a>
           </li>
           <li
           {% if 'listings' in request.path %}
@@ -40,7 +40,7 @@
             class = "nav-item mr-3"
           {% endif %}
           >
-            <a class="nav-link" href="{% url 'listings' %}">Featured Listings</a>
+            <a class="nav-link" href="{% url 'listings' %}">Imóveis</a>
           </li>
         </ul>
 
@@ -53,12 +53,12 @@
           class = "nav-item mr-3"
           {% endif %}
           >
-            <a class="nav-link" href="{% url 'dashboard' %}">Dashboard ({{user.first_name}})</a>
+            <a class="nav-link" href="{% url 'dashboard' %}">Meus dados ({{user.first_name}})</a>
           </li>
 
           <li class="nav-item mr-3">
             <a class="nav-link" href="javascript:{document.getElementById('logout').submit()}">
-              <i class="fas fa-sign-out-alt"></i> Logout
+              <i class="fas fa-sign-out-alt"></i> Sair
             </a>
             <form action="{% url 'logout' %}" method="POST" id="logout">
               {% csrf_token %}
@@ -75,7 +75,7 @@
             {% endif %}
             >
               <a class="nav-link" href="{% url 'register' %}">
-                <i class="fas fa-user-plus"></i> Register</a
+                <i class="fas fa-user-plus"></i> Registro</a
               >
             </li>
             <li
@@ -88,7 +88,7 @@
               <a class="nav-link" href="{% url 'login' %}">
                 <i class="fas fa-sign-in-alt"></i>
 
-                Login</a
+                Entrar</a
               >
             </li>
           {% endif %}
