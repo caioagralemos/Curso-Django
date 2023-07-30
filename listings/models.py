@@ -30,27 +30,3 @@ class Listing(models.Model):
 
     def __str__(self):
         return self.title
-    
-    def save(self, *args, **kwargs):
-        if self.photo_main:
-            x = self.photo_main.url.replace('/curso_django/media/', '')
-            self.photo_main.url = f' /www/media/curso_django/{x}'
-        if self.photo_1:
-            x = self.photo_1.url.replace('/curso_django/media/', '')
-            self.photo_1.url = f' /www/media/curso_django/{x}'
-        if self.photo_2:
-            x = self.photo_2.url.replace('/curso_django/media/', '')
-            self.photo_2.url = f' /www/media/curso_django/{x}'
-        if self.photo_main:
-            x = self.photo_3.url.replace('/curso_django/media/', '')
-            self.photo_3.url = f' /www/media/curso_django/{x}'
-        if self.photo_main:
-            x = self.photo_4.url.replace('/curso_django/media/', '')
-            self.photo_4.url = f' /www/media/curso_django/{x}'
-        if self.photo_main:
-            x = self.photo_5.url.replace('/curso_django/media/', '')
-            self.photo_5.url = f' /www/media/curso_django/{x}'
-        if self.photo_main:
-            x = self.photo_6.url.replace('/curso_django/media/', '')
-            self.photo_6.url = f' /www/media/curso_django/{x}'
-        super().save(*args, **kwargs)
