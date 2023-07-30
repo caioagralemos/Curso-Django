@@ -125,15 +125,15 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_ROOT = '/home/mydjango/www/static/curso_django'
 STATIC_URL = '/static/'
+STATIC_ROOT = '/home/mydjango/www/curso_django/static'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'curso_django/static')
 ]
 
 # Media Folder Settings
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'www/media')
+MEDIA_ROOT = '/home/mydjango/www/curso_django/media'
 
 
 # Default primary key field type

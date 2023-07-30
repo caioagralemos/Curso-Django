@@ -13,3 +13,9 @@ class Realtor(models.Model):
     hire_date = models.DateTimeField(default=datetime.now(), blank= True)
     def __str__(self):
         return self.name
+    
+    def save(self, *args, **kwargs):
+        if self.photo.url.startswith('/curso_django/media/photos/'):
+            x = self.photo.url.replace('/curso_django/media/', '')
+            self.photo.url = f' /www/media/curso_django/{x}'
+        super().save(*args, **kwargs)
